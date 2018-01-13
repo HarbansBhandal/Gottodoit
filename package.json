@@ -1,0 +1,33 @@
+{
+  "name": "gottodoit",
+  "version": "1.0.0",
+  "description": "weapon of righteousness",
+  "main": "server.js",
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "method-override": "^2.3.10",
+    "mongoose": "^4.13.9",
+    "morgan": "^1.9.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HarbansBhandal/Gottodoit.git"
+  },
+  "keywords": [
+    "litaf",
+    "woke"
+  ],
+  "author": "mee",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HarbansBhandal/Gottodoit/issues"
+  },
+  "homepage": "https://github.com/HarbansBhandal/Gottodoit#readme"
+}

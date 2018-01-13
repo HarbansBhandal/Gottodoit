@@ -1,0 +1,76 @@
+<todo-info>
+
+<div class="container">
+
+<div class="row"><div class="col-md-6">
+
+ 	<h4>Overdue:</h4>
+ 		<p class="bg-info" ng-repeat="item in ListVM.todoInfo" ng-show="item.isCompleted == false">
+ 			<span ng-if="item.dueDate < ListVM.currentDate.toISOString()">
+				<input type="checkbox" ng-model="item.isCompleted" ng-click="ListVM.updatedStatus(item._id)">
+				<br>Task: {{item.toDoItem}}
+				<br>Due Date: {{item.dueDate | date: 'MM/dd/yyyy'}}
+			</span>
+		</p>
+	<br>
+
+ 	<h4>Due Today:</h4>
+ 		<p class="bg-info" ng-repeat="item in ListVM.todoInfo" ng-show="item.isCompleted == false">
+ 			<span ng-if="item.dueDate == ListVM.currentDate.toISOString()">
+				<input type="checkbox" ng-model="item.isCompleted" ng-click="ListVM.updatedStatus(item._id)">
+				<br>Task: {{item.toDoItem}}
+				<br>Due Date: {{item.dueDate | date: 'MM/dd/yyyy'}}
+			</span>
+		</p>
+	<br>
+
+ 	<h4>Due Later:</h4>
+ 		<p class="bg-info" ng-repeat="item in ListVM.todoInfo" ng-show="item.isCompleted == false">
+ 			<span ng-if="item.dueDate > ListVM.currentDate.toISOString()">
+				<input type="checkbox" ng-model="item.isCompleted" ng-click="ListVM.updatedStatus(item._id)">
+				<br>Task: {{item.toDoItem}}
+				<br>Due Date: {{item.dueDate | date: 'MM/dd/yyyy'}}
+			</span>
+		</p>
+	<br>
+
+</div></div>
+
+</div>
+
+</todo-info>
+
+<!-- Alternate version Below - Saved for reference -->
+<!-- 	<h4>Overdue:</h4>
+	<span ng-repeat="item in ListVM.todoInfo" ng-show="item.isCompleted == false">
+		<ul>
+			<li ng-if="item.dueDate < ListVM.currentDate.toISOString()">
+				<input type="checkbox" ng-model="item.isCompleted" ng-click="ListVM.updatedStatus(item._id)">
+				{{item.toDoItem}}
+				{{item.dueDate | date: 'MM/dd/yyyy'}}
+			</li>
+		</ul>
+	</span>
+
+	<h4>Due Today:</h4>
+	<span ng-repeat="item in ListVM.todoInfo" ng-show="item.isCompleted == false">
+		<ul>
+			<li ng-if="item.dueDate == ListVM.currentDate.toISOString()">
+				<input type="checkbox" ng-model="item.isCompleted" ng-click="ListVM.updatedStatus(item._id)">
+				{{item.toDoItem}}
+				{{item.dueDate | date: 'MM/dd/yyyy'}}
+			</li>
+		</ul>
+	</span>
+
+	<h4>Due Later:</h4>
+	<span ng-repeat="item in ListVM.todoInfo" ng-show="item.isCompleted == false">
+		<ul>
+			<li ng-if="item.dueDate > ListVM.currentDate.toISOString()">
+				<input type="checkbox" ng-model="item.isCompleted" ng-click="ListVM.updatedStatus(item._id)">
+				{{item.toDoItem}}
+				{{item.dueDate | date: 'MM/dd/yyyy'}}
+			</li>
+		</ul>
+	</span>
+ -->

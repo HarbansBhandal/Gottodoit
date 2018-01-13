@@ -1,0 +1,26 @@
+<div class = "container">
+
+<div class = "row"><div class="col-md-6">
+
+	<div class="form-group">
+		<label>Enter a task:</label>
+		<input class="form-control" name="toDoItem" type="text" ng-model="CreateVM.todo.toDoItem" placeholder="task">
+	</div>
+	<div class="form-group">
+		<label>Select a due date:</label>
+		<input class="form-control" name="dueDate" type="date" ng-model="CreateVM.todo.dueDate">
+	</div>
+	<button type="submit" class="btn btn-default" value="Save" ng-click="CreateVM.addTodo()">Submit</button>
+
+</div></div>
+
+</div>
+
+<!-- Alternate version Below - Saved for reference -->
+<!-- 	<form class="bg-info">
+		<label>Enter a task and due date:</label>
+		<br><input name="toDoItem" type="text" ng-model="CreateVM.todo.toDoItem" placeholder="enter task">
+		<br><input name="dueDate" type="date" ng-model="CreateVM.todo.dueDate">
+	</form>
+	<button type="button" value="Save" ng-click="CreateVM.addTodo()">Save</button>
+ -->

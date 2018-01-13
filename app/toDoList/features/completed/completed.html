@@ -1,0 +1,27 @@
+<div class="container">
+
+<div class="row"><div class="col-md-6">
+
+	<h4>Completed Tasks:</h4>
+
+	<p class="bg-info" ng-repeat="item in CompletedVM.todoInfo" ng-show="item.isCompleted == true">
+			<input type="checkbox" ng-model="item.isCompleted" ng-click="CompletedVM.updatedStatus(item._id)">
+			<br>Task: {{item.toDoItem}}
+			<br>Due Date: {{item.dueDate | date: 'MM/dd/yyyy'}}
+	</p>
+
+</div></div>
+
+</div>
+
+<!-- Alternate version Below - Saved for reference -->
+<!-- 	<span ng-repeat="item in CompletedVM.todoInfo" ng-show="item.isCompleted == true">
+		<ul>
+			<li>
+				<input type="checkbox" ng-model="item.isCompleted" ng-click="CompletedVM.updatedStatus(item._id)">
+				{{item.toDoItem}}
+				{{item.dueDate | date: 'MM/dd/yyyy'}}
+			</li>
+		</ul>
+	</span>
+ -->
